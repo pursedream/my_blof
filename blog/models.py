@@ -29,6 +29,7 @@ class Article(models.Model):
     #http://www.cnblogs.com/linxiyue/p/3667418.html 对应关系
     category = models.ForeignKey(Category);
     tag = models.ManyToManyField(Tag);
+    #有的时候这一句为tag = models.ForeignKey(Category, on_delete = models.CASCADE)
 
     user = models.ForeignKey(User);
     
